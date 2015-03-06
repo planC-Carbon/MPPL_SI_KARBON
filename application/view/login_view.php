@@ -2,7 +2,6 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <title>Login Anggota</title>
-<link rel="icon" type="image/png" href="../images/saveKBS.png">
 </head>
 <body background="../images/siteBackground.jpg">
 
