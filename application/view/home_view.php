@@ -9,7 +9,7 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>C-Carbon - Home</title>
-<link rel="icon" type="image/jpg" href="../images/siklus.jpg">
+<link rel="icon" type="image/jpg" href="../../images/siklus.jpg">
 <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Belgrano' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="../../styles.css">
