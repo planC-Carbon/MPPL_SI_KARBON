@@ -2,7 +2,7 @@
 <head>
 <link rel="stylesheet" type="text/css" href="../styles.css">
 <title>Login Anggota</title>
-<link rel="icon" type="image/jpg" href="../images/siklus.jpg">
+<link rel="icon" type="image/jpg" href="../../images/siklus.jpg">
 </head>
 <body background="../images/siteBackground.jpg">
 
