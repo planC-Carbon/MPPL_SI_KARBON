@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/MWVf-Rwh4GLQVBEwbyI61Q.woff) format('woff');
+}
+
+@font-face {
+  font-family: 'Belgrano';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Belgrano'), local('Belgrano-Regular'), url(http://themes.googleusercontent.com/static/fonts/belgrano/v4/9nICvxZmkDv7_ninPVYjofesZW2xOQ-xsNqO47m55DA.woff) format('woff');
+}
