@@ -21,8 +21,13 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
     <div class="headerContainer">
         <h1><a href="">C- <span>Carbon</span></a></h1>
         <div id="login" align="right">
+<<<<<<< HEAD
         <a href="http://10.151.34.9/fpsavekbs/CodeIgniter/index.php/registrasi/input">register</a>
         <a href="http://10.151.34.9/fpsavekbs/CodeIgniter/index.php/login">login</a>
+=======
+        <a href="#">register</a>
+        <a href="http://localhost:81/CI/index.php/login">login</a>
+>>>>>>> origin/master
         </div>
         <div id="navcontainer">
             <ul id="navlist">
@@ -38,8 +43,13 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
 </header>
 <div class="container">
     <section>
+<<<<<<< HEAD
     	<!-- begin .slider -->
 		<div class="slider">
+=======
+        <!-- begin .slider -->
+        <div class="slider">
+>>>>>>> origin/master
             <div class="flexslider">
                 <ul class="slides">
                     <li><img src="../../images/pohon.jpg" alt=""></li>
@@ -48,17 +58,30 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
             </div>
         </div>
         <div class="clearfloat"></div>
+<<<<<<< HEAD
 		<!-- end .slider -->
         <h1>Selamat Datang</h1>
         <p>
         	C-Carbon merupakan sebuah aplikasi penghitung karbon berbasis web. C-Carbon dibuat untuk kepentingan penghitungan karbon yang berada di ITS. 
+=======
+        <!-- end .slider -->
+        <h1>Selamat Datang</h1>
+        <p>
+            C-Carbon merupakan sebuah aplikasi penghitung karbon berbasis web. C-Carbon dibuat untuk kepentingan penghitungan karbon yang berada di ITS. 
+>>>>>>> origin/master
         </p>
         <!-- begin .boxes -->
         <div class="clearfloat"></div>
         <div class="boxes">
+<<<<<<< HEAD
 			<ul>
             	<li>
                 	<img src="../../images/event1.png" alt=""><h2>C-Carbon</h2>
+=======
+            <ul>
+                <li>
+                    <img src="../../images/event1.png" alt=""><h2>C-Carbon</h2>
+>>>>>>> origin/master
                     <p><br><br><br><br><br>
                     </p>
                     <a href="#"><button>More</button></a>
@@ -80,7 +103,11 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
                     <a href="#"><button>More</button></a>
                 </li>
                 <li>
+<<<<<<< HEAD
                 	<img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
+=======
+                    <img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
+>>>>>>> origin/master
                     <p><br><br><br><br><br>
                     </p>
                     <a #"><button>More</button></a>
