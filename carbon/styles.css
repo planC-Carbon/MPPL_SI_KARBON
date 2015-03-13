@@ -374,7 +374,8 @@ font:  20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#639;}
 	ax-width: 100px;
 	background-color:rgba(255,255,255,0.2);
 }
-
+.fin{min-height:20px;padding:19px;margin-bottom:20px;background-color:rgba(255,255,255,0.7);border:2px solid green;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px;-webkit-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);box-shadow:inset 0 1px 1px rgba(0, 0, 0, 0.05);
+font:  20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#639;}
 table{
 	font: 20px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#639;
 }
