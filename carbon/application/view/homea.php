@@ -21,22 +21,12 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
     <div class="headerContainer">
         <h1><a href="">C- <span>Carbon</span></a></h1>
         <div id="login" align="right">
-<<<<<<< HEAD:application/view/homea.php
-<<<<<<< HEAD
-        <a href="http://10.151.34.9/fpsavekbs/CodeIgniter/index.php/registrasi/input">register</a>
-        <a href="http://10.151.34.9/fpsavekbs/CodeIgniter/index.php/login">login</a>
-=======
-        <a href="#">register</a>
-        <a href="http://localhost:81/CI/index.php/login">login</a>
->>>>>>> origin/master
-=======
-        <a href="http://localhost:81/CI/index.php/registrasi/input">register</a>
-        <a href="http://localhost:81/CI/index.php/login">login</a>
->>>>>>> origin/master:carbon/application/view/homea.php
+        <!--<a href="http://localhost/CI/index.php/registrasi/input">register</a>-->
+        <a href="http://localhost:81/CI/index.php/login">Login</a>
         </div>
         <div id="navcontainer">
             <ul id="navlist">
-                <li id="active"><a href="http://localhost:81/CI/index.php/home/index">Home</a></li>
+                <li id="active"><a href="http://localhost/CI/index.php/home/index">Home</a></li>
                 <li><a href="#">C-Carbon</a></li>
                 <li><a href="#">Data Carbon</a></li>
                 <li><a href="#">Data Pohon</a></li>
@@ -48,18 +38,8 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
 </header>
 <div class="container">
     <section>
-<<<<<<< HEAD:application/view/homea.php
-<<<<<<< HEAD
-    	<!-- begin .slider -->
-		<div class="slider">
-=======
         <!-- begin .slider -->
         <div class="slider">
->>>>>>> origin/master
-=======
-        <!-- begin .slider -->
-        <div class="slider">
->>>>>>> origin/master:carbon/application/view/homea.php
             <div class="flexslider">
                 <ul class="slides">
                     <li><img src="../../images/pohon.jpg" alt=""></li>
@@ -68,43 +48,17 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
             </div>
         </div>
         <div class="clearfloat"></div>
-<<<<<<< HEAD:application/view/homea.php
-<<<<<<< HEAD
-		<!-- end .slider -->
-        <h1>Selamat Datang</h1>
-        <p>
-        	C-Carbon merupakan sebuah aplikasi penghitung karbon berbasis web. C-Carbon dibuat untuk kepentingan penghitungan karbon yang berada di ITS. 
-=======
         <!-- end .slider -->
         <h1>Selamat Datang</h1>
         <p>
             C-Carbon merupakan sebuah aplikasi penghitung karbon berbasis web. C-Carbon dibuat untuk kepentingan penghitungan karbon yang berada di ITS. 
->>>>>>> origin/master
-=======
-        <!-- end .slider -->
-        <h1>Selamat Datang</h1>
-        <p>
-            C-Carbon merupakan sebuah aplikasi penghitung karbon berbasis web. C-Carbon dibuat untuk kepentingan penghitungan karbon yang berada di ITS. 
->>>>>>> origin/master:carbon/application/view/homea.php
         </p>
         <!-- begin .boxes -->
         <div class="clearfloat"></div>
         <div class="boxes">
-<<<<<<< HEAD:application/view/homea.php
-<<<<<<< HEAD
-			<ul>
-            	<li>
-                	<img src="../../images/event1.png" alt=""><h2>C-Carbon</h2>
-=======
             <ul>
                 <li>
                     <img src="../../images/event1.png" alt=""><h2>C-Carbon</h2>
->>>>>>> origin/master
-=======
-            <ul>
-                <li>
-                    <img src="../../images/event1.png" alt=""><h2>C-Carbon</h2>
->>>>>>> origin/master:carbon/application/view/homea.php
                     <p><br><br><br><br><br>
                     </p>
                     <a href="#"><button>More</button></a>
@@ -126,15 +80,7 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
                     <a href="#"><button>More</button></a>
                 </li>
                 <li>
-<<<<<<< HEAD:application/view/homea.php
-<<<<<<< HEAD
-                	<img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
-=======
                     <img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
->>>>>>> origin/master
-=======
-                    <img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
->>>>>>> origin/master:carbon/application/view/homea.php
                     <p><br><br><br><br><br>
                     </p>
                     <a #"><button>More</button></a>
