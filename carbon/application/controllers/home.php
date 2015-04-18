@@ -8,7 +8,8 @@ class Home extends CI_Controller {
  }
 
  function index()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -21,8 +22,9 @@ class Home extends CI_Controller {
      redirect('login', 'refresh');
    }
  }
- function carbon()
- {
+ function pohon()
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -30,96 +32,91 @@ class Home extends CI_Controller {
      //$this->load->view('event_view', $data);
    
    $this->load->helper('html');
-   $this->load->model('data_karbon_model');
-   $data['query'] = $this->data_karbon_model->event_getall();
-   $this->load->view('data_karbon_view',$data);
+   $this->load->model('pohon_model');
+   $data['listPohon'] = $this->pohon_model->getAllPohon(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
+    $this->load->view('input_pohon', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
    }
  }
- 
- function pohon()
- {
+ function user()
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
-     //$this->load->view('gallery_view', $data);
+     //$this->load->view('event_view', $data);
    
    $this->load->helper('html');
-    $this->load->model('gallery_model');
-    $data['query1'] = $this->gallery_model->get1($ID_Hewan="1");
-    $data['query2'] = $this->gallery_model->get2($ID_Hewan="2");
-    $data['query3'] = $this->gallery_model->get3($ID_Hewan="3");
-    $data['query4'] = $this->gallery_model->get4($ID_Hewan="4");
-    $this->load->view('gallery_view',$data);
+   $this->load->model('user_model');
+   $data['listAnggota'] = $this->user_model->getAllAnggota(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
+    $this->load->view('anggota_view', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
    }
  }
- 
- function fantasi()
- {
+ function input_data()
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
-     //$this->load->view('fantasi_view', $data);
+     //$this->load->view('event_view', $data);
    
    $this->load->helper('html');
-    $this->load->model('fantasi_model');
-    $data['query1'] = $this->fantasi_model->get1($id_fantasi="1");
-    $data['query2'] = $this->fantasi_model->get2($id_fantasi="2");
-    $data['query3'] = $this->fantasi_model->get3($id_fantasi="3");
-    $data['query4'] = $this->fantasi_model->get4($id_fantasi="4");
-    $this->load->view('fantasi_view',$data);
+   $this->load->model('pohon_model');
+   $data['inputDataPohon'] = $this->pohon_model->getAllData(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
+    $this->load->view('input_data', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
    }
  }
- 
- function contact()
- {
+ function karbon_submit()
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
      $data['username'] = $session_data['username'];
-     $this->load->view('contact_view', $data);
+     //$this->load->view('event_view', $data);
+   
+   $this->load->helper('html');
+   $this->load->model('karbon_model');
+   $data['listKarbon'] = $this->karbon_model->rumus(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
+    $this->load->view('karbon_view', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
    }
  }
- 
- function ticket()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $this->load->view('ticket_view', $data);
-   }
- }
- 
- function ticket_submit()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $this->load->view('ticket_submit', $data);
-   }
- }
- 
- function reservasi()
- {
+  function karbon()
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
+   
    $this->load->helper('form');
    $this->load->helper('html');
-   $this->load->model('reservasi_model');
+   $this->load->model('karbon_model');
    
    if($this->input->post('mysubmit'))
-   {
-     $this->reservasi_model->entry_insert();
-     redirect('home/ticket_submit', 'refresh');
-  }
-  $data = $this->reservasi_model->general();
-  
-  $this->load->view('reservasi_view',$data);
- }
+    {
+     $this->karbon_model->entry_insert();
+     redirect('home/karbon_submit', 'refresh');
+    }
+  $data = $this->karbon_model->general(); 
+  $this->load->view('karbon_input',$data);
+
+}
  
+ /*function karbon()
+ {
+   if($this->session->userdata('logged_in'))
+   {
+     $session_data = $this->session->userdata('logged_in');
+     $data['username'] = $session_data['username'];
+   
+   $this->load->helper('html');
+   $this->load->model('karbon_model');
+   $data['entry_insert'] = $this->karbon_model->getAllData(); //berisi dari return value pada function getAllProducts() di file models/products_model.php
+    $this->load->view('karbon_input', $data); //menampilkan view 'products_view' dan juga passing data dengan nama $data(Bentuknya array) yang berisi 'listProducts'
+   }
+ }*/
  function logout()
  {
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    $this->session->unset_userdata('logged_in');
    session_destroy();
    //redirect('home', 'refresh');

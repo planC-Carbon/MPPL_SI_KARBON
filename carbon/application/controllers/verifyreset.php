@@ -10,7 +10,8 @@ class VerifyReset extends CI_Controller {
  }
 
  function index()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    //This method will have the credentials validation
    $this->load->library('form_validation');
 
@@ -30,6 +31,8 @@ class VerifyReset extends CI_Controller {
       else
         {
      //Field validation failed.  User redirected to login page
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
        $this->load->view('reset_password_view');
       $this->form_validation->set_message('index','Passsword Not Match');
        return false;
@@ -39,6 +42,8 @@ class VerifyReset extends CI_Controller {
     else
     {
      //Field validation failed.  User redirected to login page
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
       $this->load->view('reset_password_view');
 
     }

@@ -27,9 +27,6 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
         <div id="navcontainer">
             <ul id="navlist">
                 <li id="active"><a href="http://localhost:81/CI/index.php/home/index">Home</a></li>
-                <li><a href="#">C-Carbon</a></li>
-                <li><a href="#">Data Carbon</a></li>
-                <li><a href="#">Data Pohon</a></li>
                 <li><a href="http://siklus.lmb.its.ac.id/">Siklus ITS</a></li>
             </ul>
         </div>
@@ -83,7 +80,7 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
                     <img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>
                     <p><br><br><br><br><br>
                     </p>
-                    <a #"><button>More</button></a>
+                    <a><button>More</button></a>
                 </li>
             </ul>
             <div class="clearfloat"></div>

@@ -8,7 +8,8 @@ class Anggota extends CI_Controller {
  }
 
  function index()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -22,7 +23,8 @@ class Anggota extends CI_Controller {
    }
  }
  function carbon()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -37,7 +39,8 @@ class Anggota extends CI_Controller {
  }
  
  function pohon()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -53,73 +56,9 @@ class Anggota extends CI_Controller {
     $this->load->view('gallery_view',$data);
    }
  }
- 
- function fantasi()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     //$this->load->view('fantasi_view', $data);
-   
-   $this->load->helper('html');
-    $this->load->model('fantasi_model');
-    $data['query1'] = $this->fantasi_model->get1($id_fantasi="1");
-    $data['query2'] = $this->fantasi_model->get2($id_fantasi="2");
-    $data['query3'] = $this->fantasi_model->get3($id_fantasi="3");
-    $data['query4'] = $this->fantasi_model->get4($id_fantasi="4");
-    $this->load->view('fantasi_view',$data);
-   }
- }
- 
- function contact()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $this->load->view('contact_view', $data);
-   }
- }
- 
- function ticket()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $this->load->view('ticket_view', $data);
-   }
- }
- 
- function ticket_submit()
- {
-   if($this->session->userdata('logged_in'))
-   {
-     $session_data = $this->session->userdata('logged_in');
-     $data['username'] = $session_data['username'];
-     $this->load->view('ticket_submit', $data);
-   }
- }
- 
- function reservasi()
- {
-   $this->load->helper('form');
-   $this->load->helper('html');
-   $this->load->model('reservasi_model');
-   
-   if($this->input->post('mysubmit'))
-   {
-     $this->reservasi_model->entry_insert();
-     redirect('home/ticket_submit', 'refresh');
-  }
-  $data = $this->reservasi_model->general();
-  
-  $this->load->view('reservasi_view',$data);
- }
- 
  function logout()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    $this->session->unset_userdata('logged_in');
    session_destroy();
    //redirect('home', 'refresh');

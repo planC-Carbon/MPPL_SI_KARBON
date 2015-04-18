@@ -28,42 +28,54 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
         <div id="navcontainer">
             <ul id="navlist">
                 <li><a href="http://localhost:81/CI/index.php/home/index">Home</a></li>
-                <li id="active"><a href="http://localhost:81/CI/index.php/home/user">Data Anggota</a></li>
-                <li><a href="http://localhost:81/CI/index.php/home/karbon">Hitung Carbon</a></li>
+                <li ><a href="http://localhost:81/CI/index.php/home/user">Data Anggota</a></li>
+                <li id="active"><a href="http://localhost:81/CI/index.php/home/karbon">Hitung Carbon</a></li>
                 <li><a href="http://localhost:81/CI/index.php/home/pohon">Data Pohon</a></li>
                 <li><a href="http://siklus.lmb.its.ac.id/">Siklus ITS</a></li>
             </ul>
         </div>
         
    <?php 
-      $jumlahAnggota = $listAnggota->num_rows(); //$listProduct berasal dari data yang dilempar dari controller, yaitu $data['listProducts']. num_rows() digunakan untuk menghitung jumlah baris yang dimiliki ketika kita melakukan select dari database
+      $jumlahKarbon = $listKarbon->num_rows(); //$listProduct berasal dari data yang dilempar dari controller, yaitu $data['listProducts']. num_rows() digunakan untuk menghitung jumlah baris yang dimiliki ketika kita melakukan select dari database
     ?>
      
     <?php
-            if($jumlahAnggota > 0){ //Apabila data produk yang ada di dalam database lebih dari 0 maka baru ditampilkan
+            if($jumlahKarbon > 0){ //Apabila data produk yang ada di dalam database lebih dari 0 maka baru ditampilkan
     ?>
       <!-- Kalau ada datanya, maka kita akan tampilkan dalam table -->
       <table border="1" >
-        <caption text-align= "center"><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspList Anggota<br><br></h1></caption>
+        <caption text-align= "center"><h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspList Karbon<br><br></h1></caption>
 
         <thead>
 
           <tr>
-            <th>Nomor Induk Anggota&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-            <th>Nama &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
-            <th>Email&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+            <th>ID Karbon</th>
+            <th>Tinggi Pohon</th>
+            <th>Diameter Pohon</th>
+            <th>Sudut</th>
+            <th>Jarak Pengamat</th>
+            <th>Tinggi Pengamat</th>
+            <th>ID Pohon</th>
+            <th>Berat Jenis</th>
+            <th>Hasil</th>
           </tr>
         </thead>
         <tbody>
           <?php
             //Kita akan melakukan looping sesuai dengan data yang dimiliki
             $i = 0; //nantinya akan digunakan untuk pengisian Nomor
-            foreach ($listAnggota->result() as $row) {
+            foreach ($listKarbon->result() as $row) {
           ?>
           <tr>
-            <td><?= $row->nia ?></td> <!-- karena berbentuk objek, maka kita menggunakan panah (->) untuk menunjuk field yang ada di database -->
-            <td><?= $row->nama ?></td>
-            <td><?= $row->email ?></td>          
+            <td><?= $row->id_karbon ?></td> <!-- karena berbentuk objek, maka kita menggunakan panah (->) untuk menunjuk field yang ada di database -->
+            <td><?= $row->tinggi_pohon ?></td>
+            <td><?= $row->diameter_pohon ?></td>  
+            <td><?= $row->sudut ?></td> 
+            <td><?= $row->jarak_pengamat ?></td>
+            <td><?= $row->tinggi_pengamat ?></td>
+            <td><?= $row->id_pohon ?></td>
+            <td><?= $row->berat_jenis ?></td>
+            <td><?= $row->hasil ?></td>       
           </tr>
           <?php
             }

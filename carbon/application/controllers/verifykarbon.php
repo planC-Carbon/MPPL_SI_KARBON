@@ -10,6 +10,8 @@ class Verifykarbon extends CI_Controller {
 
  function index()
  {
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    //This method will have the credentials validation
    $this->load->library('form_validation');
 		
@@ -22,7 +24,9 @@ class Verifykarbon extends CI_Controller {
    if($this->form_validation->run() == FALSE)
    {
      //Field validation failed.  User redirected to login page
-     //$data = $this->registrasi_model->general();
+    //$data = $this->registrasi_model->general();
+		$this->load->view('templates/header');
+	$this->load->view('templates/footer');
 	 $this->load->view('karbon_input');
    }
    else

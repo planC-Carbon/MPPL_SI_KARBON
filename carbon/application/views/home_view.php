@@ -27,9 +27,9 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
         <div id="navcontainer">
             <ul id="navlist">
                 <li id="active"><a href="http://localhost:81/CI/index.php/home/index">Home</a></li>
-                <li><a href="#">Profil</a></li>
-                <li><a href="#">Hitung Carbon</a></li>
-                <li><a href="#">Input Pohon</a></li>
+                <li><a href="http://localhost:81/CI/index.php/home/user">Data Anggota</a></li>
+                <li><a href="http://localhost:81/CI/index.php/home/karbon">Hitung Carbon</a></li>
+                <li><a href="http://localhost:81/CI/index.php/home/pohon">Data Pohon</a></li>
                 <li><a href="http://siklus.lmb.its.ac.id/">Siklus ITS</a></li>
             </ul>
         </div>
@@ -72,12 +72,12 @@ Released for free under a Creative Commons Attribution 3.0 Unported License (CC 
                  <li>
                     <img src="../../images/pohon1.jpg" alt=""><h2>Data Pohon</h2>
                     <p>
-                    <br>Pohon Tabebuya
-                    <br>Pohon Sawo
-                    <br>Pohon Beringin
-                    <br>Pohon Pinus
+                    <br>Pohon Mahoni
+                    <br>Pohon Jati
+                    <br>Pohon Sengon
+                    <br>Pohon Puspa
                     </p>
-                    <a href="#"><button>More</button></a>
+                    <a href="http://localhost:81/CI/index.php/home/pohon"><button>More</button></a>
                 </li>
                 <li>
                 	<img src="../../images/yaya.jpg" alt=""><h2>Anggota</h2>

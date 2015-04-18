@@ -10,19 +10,22 @@ class Verifyregistrasi extends CI_Controller {
 
  function index()
  {
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    //This method will have the credentials validation
    $this->load->library('form_validation');
-		
-	 $this->form_validation->set_rules('form_input($fnia)', 'Nomor Induk Anggota', 'required');
-   $this->form_validation->set_rules('form_input($fnama)', 'Nama', 'required');
-   $this->form_validation->set_rules('form_input($femail)', 'Email', 'required');
-   $this->form_validation->set_rules('form_input($fusername)', 'Username', 'required');
-   $this->form_validation->set_rules('form_input($fpassword)', 'Password', 'required');
+	 $this->form_validation->set_rules('form_input($fnia)', 'NRP', 'trim|required|xss_clean');
+   $this->form_validation->set_rules('form_input($fnama)', 'Name', 'trim|required|xss_clean');
+   $this->form_validation->set_rules('form_input($femail)', 'Email', 'trim|required|xss_clean');
+   $this->form_validation->set_rules('form_input($fusername)', 'Username', 'trim|required|xss_clean');
+   $this->form_validation->set_rules('form_input($fpassword)', 'Password', 'trim|required|xss_clean');
 
    if($this->form_validation->run() == FALSE)
    {
      //Field validation failed.  User redirected to login page
-     $data = $this->registrasi_model->general();
+     //$data = $this->registrasi_model->general();
+	 	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
 	 $this->load->view('registrasi_input');
    }
    else

@@ -21,6 +21,7 @@ class Registrasi_model extends CI_Model{
 		$this->db->insert('akun_user',$data);
 	}
 	
+	
 	/*function member_getall()
 	{
 		$this->load->database();
@@ -75,12 +76,12 @@ by Julia Safitri kelompok saveKBS';*/
 		//$data['forminput'] = 'Form Input';
 		//$data['formupdate'] = 'Form Edit';
 		//$data['fID_Anggota'] = array('name'=>'ID_Anggota','size'=>15);
-		$data['fnia'] = array('name'=>'nia','size'=>40);
+		$data['fnia'] = array('name'=>'nia','size'=>30);
 		
-		$data['fnama'] = array('name'=>'nama','size'=>40);
-		$data['femail']	= array('name'=>'email','size'=>40);
-		$data['fusername']	= array('name'=>'username','size'=>40);
-		$data['fpassword']	= array('type'=>'password' ,'name'=>'password','size'=>40);
+		$data['fnama'] = array('name'=>'nama','size'=>30);
+		$data['femail']	= array('name'=>'email','size'=>30);
+		$data['fusername']	= array('name'=>'username','size'=>30);
+		$data['fpassword']	= array('type'=>'password' ,'name'=>'password','size'=>30);
 		
   		return $data;	
  	}

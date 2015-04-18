@@ -8,7 +8,8 @@ class Home_anggota extends CI_Controller {
  }
 
  function index()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -22,7 +23,8 @@ class Home_anggota extends CI_Controller {
    }
  }
  function carbon()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -37,7 +39,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function pohon()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -55,7 +58,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function fantasi()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -73,7 +77,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function contact()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -83,7 +88,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function ticket()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -93,7 +99,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function ticket_submit()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    if($this->session->userdata('logged_in'))
    {
      $session_data = $this->session->userdata('logged_in');
@@ -103,7 +110,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function reservasi()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    $this->load->helper('form');
    $this->load->helper('html');
    $this->load->model('reservasi_model');
@@ -119,7 +127,8 @@ class Home_anggota extends CI_Controller {
  }
  
  function logout()
- {
+ {	$this->load->view('templates/header');
+	$this->load->view('templates/footer');
    $this->session->unset_userdata('logged_in');
    session_destroy();
    //redirect('home', 'refresh');
